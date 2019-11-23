@@ -1,0 +1,23 @@
+extends@: default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+            header.date:
+              type: datetime
+              style: vertical
+              label: Date
+            header.place:
+              type: text
+              style: vertical
+              label: Lieu
+            header.organisers:
+              type: list
+              style: vertical
+              label: Organisateurs
+              fields:
+                .name:
+                  type: text

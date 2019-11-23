@@ -1,0 +1,7 @@
+fr:
+    MONTHS: [janvier, février, mars, avril, mai, juin, juillet, août, septembre, octobre, novembre, décembre]
+    DAYS: [lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche]
+
+en:
+    MONTHS: [January, February, March, April, May, June, July, August, September, October, November, Ddcember]
+    DAYS: [Monday, Tuesday, Wednesday, Thurday, Friday, Saturday, Sunday]
