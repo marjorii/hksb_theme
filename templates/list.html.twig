@@ -1,0 +1,20 @@
+{% extends 'default.html.twig' %}
+
+{% block content %}
+    <div id="list">
+        <ul>
+        {% for item in page.collection %}
+            <li>
+                <a href="" class="item">{{ item.title }}</a>
+                {% if item.header.date %}<p><time datetime="{{ item.date|date('c') }}">
+                {{ [item.date|date('d'), 'MONTHS'|ta(item.date|date('n') -1), item.date|date('Y'), item.date|date('H:i') ]|join(' ') }}
+            </time></p>{% endif %}
+                {% if item.header.place %}<p>{{ item.header.place }}</p>{% endif %}
+                <p>
+                {% if item.header.organisers %}{{ item.header.organisers|join(' et ') }}{% endif %}
+                </p>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

@@ -15,9 +15,16 @@ form:
               style: vertical
               label: Lieu
             header.organisers:
-              type: list
-              style: vertical
+              type: select
+              size: long
+              classes: fancy
+              multiple: true
               label: Organisateurs
-              fields:
-                .name:
-                  type: text
+              style: vertical
+              options:
+                'Hackstub': Hackstub
+                'Alsace Réseau Neutre': Alsace Réseau Neutre
+                'LJF': LJF
+                'Irina': Irina
+              validate:
+                type: commalist
