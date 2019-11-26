@@ -1,4 +1,4 @@
-document.querySelector('nav a').onclick = function(e) {
+document.querySelector('#head nav a').onclick = function(e) {
     e.preventDefault();
     document.getElementById('menu').classList.remove('hide');
 }
