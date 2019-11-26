@@ -2,7 +2,15 @@
 
 {% block page %}
 <main>
-    <div id="head">
+    <div id="square1" class="square top left">
+    </div>
+    <div id="square2" class="square top right">
+    </div>
+    <div id="square3" class="square bottom left">
+    </div>
+    <div id="square4" class="square bottom right">
+    </div>
+    <div id="head" class="top left">
         <h1>{{ page.title }}</h1>
         <nav>
             <a href="">Menu</a>
@@ -11,24 +19,24 @@
 {% block content %}
 {% endblock %}
 </main>
-<nav class="pages-nav">
+<nav id="pages-nav">
     <ul>
-        <li>
+        <li class="top">
             <a href="">Page</a>
         </li>
-        <li>
+        <li class=" top left">
             <a href="">Page</a>
         </li>
-        <li>
+        <li class="top right">
             <a href="">Page</a>
         </li>
-        <li>
+        <li class="bottom">
             <a href="">Page</a>
         </li>
     </ul>
 </nav>
 <div id="menu" class="hide">
-    <a href="" id="cross">✕</a>
+    <a href="" id="cross" class="top right">✕</a>
     <div>
         <img src="{{ url('theme://images/logo.svg') }}"/>
     </div>
@@ -36,7 +44,7 @@
         <a href="" class="lang">FR</a> / <a href="" class="lang">EN</a>
         <a href="">Plan du site</a>
     </div>
-    <div>
+    <div class="bottom">
         <a href="">News</a>
         <a href="">Agenda</a>
         <a href="">Lieux</a>
