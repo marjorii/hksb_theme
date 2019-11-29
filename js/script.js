@@ -1,4 +1,4 @@
-document.querySelector('#head nav a').onclick = function(e) {
+document.getElementById('menu-toggler').onclick = function(e) {
     e.preventDefault();
     document.getElementById('menu').classList.remove('hide');
 }
@@ -6,7 +6,7 @@ document.querySelector('#menu #cross').onclick = function(e) {
     e.preventDefault();
     document.getElementById('menu').classList.add('hide');
 }
-document.querySelector(' #menu #map-toggler').onclick = function(e) {
+document.getElementById('map-toggler').onclick = function(e) {
     e.preventDefault();
     document.getElementById('map').classList.remove('hide');
 }
