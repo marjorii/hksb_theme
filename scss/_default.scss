@@ -57,7 +57,7 @@ main {
     }
     nav {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         a {
         font-family: "Quebec Bold";
         font-size: 2rem;
@@ -65,9 +65,6 @@ main {
         padding: 0 20px 17px 20px;
         background-color: black;
         color: white;
-        }
-        a:first-of-type {
-            margin-bottom: 20px;
         }
     }
 }
@@ -211,4 +208,145 @@ main {
 }
 .bottom {
     bottom: 0;
+}
+
+@media (max-width: 768px), (max-height: 768px) {
+    main {
+        padding: 50px;
+    }
+    .square {
+        width: 100px;
+        height: 100px;
+    }
+    #square1, #square2 {
+        border-top: 10px solid black;
+    }
+    #square3, #square4 {
+        border-bottom: 10px solid black;
+    }
+    #square1, #square3 {
+        border-left: 10px solid black;
+    }
+    #square2, #square4 {
+        border-right: 10px solid black;
+    }
+    #head {
+        width: calc(100% - 100px);
+        padding: 50px 50px 0 50px;
+        h1 {
+            font-size: 1.25rem;
+            padding: 10px 10px 17px 10px;
+        }
+        nav {
+            a {
+                font-size: 1.25rem;
+                line-height: 1;
+                padding: 15px 10px 20px 10px;
+                &:first-of-type {
+                    margin-right: 0px;
+                }
+            }
+        }
+    }
+    #pages-nav {
+        li:first-of-type, li:last-of-type {
+            height: 50px;
+        }
+        & > ul > li:nth-of-type(2), & > ul > li:nth-of-type(3) {
+            width: 50px;
+        }
+        a {
+            font-size: 1rem;
+            line-height: 1rem;
+        }
+    }
+    #list {
+        margin-top: 100px;
+        a {
+            font-size: 2rem;
+            line-height: 2rem;
+        }
+        p {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+        p:last-of-type {
+            font-size: 1rem;
+            padding-bottom: 50px;
+        }
+    }
+    #menu {
+        width: 25%;
+        div {
+            font-size: 1.75rem;
+            line-height: 3.5rem;
+        }
+        div:first-of-type {
+            margin: 50px;
+            width: 13vh;
+        }
+        a {
+            font-size: 1.75rem;
+            line-height: 3.5rem;
+        }
+        div:last-of-type {
+            margin: 50px;
+        }
+    }
+}
+
+@media (max-width: 767px) and (orientation: portrait) {
+    #menu {
+        width: 100%;
+        div {
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+        }
+        a {
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+        }
+        div:first-of-type {
+            margin: 50px 0 25px 0;
+        }
+        div:last-of-type {
+            margin: 50px;
+        }
+    }
+}
+@media (min-width: 768px) and (orientation: portrait) {
+    #menu {
+        width: 35%;
+    }
+}
+@media (max-width: 1280px) and (orientation: landscape) {
+    #menu {
+        div {
+            line-height: 3rem;
+        }
+        div:first-of-type {
+            margin: 50px 0 25px 0;
+        }
+        a {
+            line-height: 3rem;
+        }
+    }
+}
+@media (max-height: 767px) and (orientation: landscape) {
+    #menu {
+        div {
+            font-size: 1rem;
+            line-height: 1.25rem;
+        }
+        a {
+            font-size: 1rem;
+            line-height: 1.25rem;
+        }
+        div:first-of-type {
+            margin: 25px 0 25px 0;
+        }
+        div:last-of-type {
+            margin: 25px;
+        }
+    }
 }
