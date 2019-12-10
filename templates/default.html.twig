@@ -46,6 +46,11 @@
         <a href="">Plan du site</a>
     </div>
     <div class="bottom">
+        {% for page in pages.children.visible %}
+            {{ dump(page.url) }}
+            {{ dump(page.title) }}
+        {% endfor %}
+        <!-- Change the following code by for loop when all pages created -->
         <a href="/news">News</a>
         <a href="/agenda">Agenda</a>
         <a href="">Lieux</a>
@@ -59,6 +64,57 @@
 </div>
 <div id="map" class="hide">
     <a href="" id="cross" class="top right">✕</a>
+    {% for page in pages.children.visible %}
+        {{ dump(page.url) }}
+        {{ dump(page.title) }}
+    {% endfor %}
+
+    <!-- Change the following code by for loop when all pages created -->
+    <div>
+        <div>
+            <a href="/news">News</a>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="/agenda">Agenda</a>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="">Lieux</a>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="/projets">Projets</a>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="">Archives</a>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="">À Propos</a>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="">Page</a>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="">Page</a>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="">Contact</a>
+        </div>
+    </div>
 </div>
 {% endblock %}
 
