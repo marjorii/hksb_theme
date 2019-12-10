@@ -1,0 +1,11 @@
+extends@: default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+            header.currentColor:
+              type: colorpicker
+              label: Couleur

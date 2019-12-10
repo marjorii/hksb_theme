@@ -1,8 +1,5 @@
 .projects {
-    main, #head {
+    body, main, #head, #pages-nav li {
         background-color: $blue ;
-    }
-    #pages-nav li {
-        background-color: $blue;
     }
 }

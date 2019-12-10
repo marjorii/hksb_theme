@@ -1,6 +1,7 @@
 {% extends 'default.html.twig' %}
 
 {% block content %}
+{{ dump(page.header.currentColor) }}
     <div id="list">
         <ul>
         {% for item in page.collection %}
