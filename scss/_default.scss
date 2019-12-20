@@ -10,7 +10,7 @@ html, body {
     padding: 0;
 }
 body {
-    background-color: $green;
+    background-color: var(--test);
 }
 main {
     padding: 100px;
@@ -49,6 +49,7 @@ main {
     justify-content: space-between;
     position: fixed;
     z-index: 995;
+    background-color: var(--test);
     h1 {
         font-family: 'Quebec Bold';
         font-size: 2rem;
@@ -106,7 +107,7 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: $green;
+        background-color: var(--test);
     }
     li:first-of-type, li:last-of-type {
         width: 100%;
