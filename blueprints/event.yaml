@@ -28,3 +28,13 @@ form:
                 'Irina': Irina
               validate:
                 type: commalist
+            header.link:
+              type: list
+              label: Lien
+              fields:
+                .name:
+                  type: text
+                  label: Nom
+                .url:
+                  type: text
+                  label: Url
