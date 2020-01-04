@@ -1,11 +1,11 @@
 {% extends 'default.html.twig' %}
-
+{% set color = page.header.currentColor %}
 {% block content %}
     <div id="list">
         <ul>
         {% for item in page.collection %}
             <li>
-                <a href="" class="item">{{ item.title }}</a>
+                <a href="{{ item.url }}" class="item">{{ item.title }}</a>
                 {% if item.header.date %}<p><time datetime="{{ item.date|date('c') }}">
                 {{ [item.date|date('d'), 'MONTHS'|ta(item.date|date('n') -1), item.date|date('Y'), item.date|date('H:i') ]|join(' ') }}
             </time></p>{% endif %}
@@ -14,12 +14,6 @@
                 {% if item.header.link %}
                     {% for info in item.header.link %}
                         <a class="small" href="{{ info.url }}" target="_blank">{{ info.name }}</a>
-                    {% endfor %}
-                {% endif %}
-                {% if item.content %}{{ item.content }}{% endif %}
-                {% if item.media.images %}
-                    {% for img in item.media.images %}
-                        {{ img }}
                     {% endfor %}
                 {% endif %}
             </li>

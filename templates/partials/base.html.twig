@@ -22,7 +22,7 @@
 
 {% endblock head %}
 </head>
-<body {% if page.header.currentColor %} style="--test:{{ page.header.currentColor }};"{% endif %} class="{{ page.header.body_classes }}">
+<body {% if color %} style="--test:{{ color }};"{% endif %} class="{{ page.header.body_classes }}">
 
 {% block page %}
 {% endblock %}

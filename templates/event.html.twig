@@ -1,0 +1,31 @@
+{% extends 'default.html.twig' %}
+{% set color = page.parent.header.currentColor %}
+{% block content %}
+    {{ dump(page.parent.header.currentColor) }}
+    <div id="list">
+        <ul>
+            <li>
+                <h1 class="item">{{ page.title }}</h1>
+                {% if page.header.date %}<p><time datetime="{{ page.date|date('c') }}">
+                {{ [page.date|date('d'), 'MONTHS'|ta(page.date|date('n') -1), page.date|date('Y'), item.date|date('H:i') ]|join(' ') }}
+            </time></p>{% endif %}
+                {% if page.header.place %}<p>{{ page.header.place }}</p>{% endif %}
+                {% if page.header.organisers %}<p class="small">{{ page.header.organisers|join(' et ') }}</p>{% endif %}
+                {% if page.header.link %}
+                    {% for info in page.header.link %}
+                        <a class="small" href="{{ info.url }}" target="_blank">{{ info.name }}</a>
+                    {% endfor %}
+                {% endif %}
+                {% if page.media.images %}
+                    {% for img in page.media.images %}
+                        {{ img }}
+                    {% endfor %}
+                {% endif %}
+                {% if page.content %}<div class="text">{{ page.content }}</div>{% endif %}
+            </li>
+        </ul>
+    </div>
+    <nav id="page-nav" class="bottom">
+        <a href="{{ page.parent.route }}">Retour</a>
+    </nav>
+{% endblock %}
