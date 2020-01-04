@@ -1,5 +1,5 @@
 body.content {
-    #head, #menu, #map, #pages-nav {
+    #head, #pages-nav {
         display: none;
     }
     #page-nav {
@@ -20,19 +20,27 @@ body.content {
             color: black;
         }
     }
-    h1 {
-        font-weight: normal;
-    }
     #list {
         margin-top: 0;
-        img, .text {
-            margin-top: 50px;
+        width: calc(100% - 200px);
+        padding: 100px 100px 20px 100px;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        z-index: 995;
+        background-color: var(--test);
+        h1 {
+            font-weight: normal;
         }
+    }
+    #content {
+        margin-top: 175px;
         img {
             width: 100%;
         }
         .text {
             width: 100%;
+            margin-top: 50px;
             p {
                 font-size: 1.5rem;
                 line-height: 2rem;

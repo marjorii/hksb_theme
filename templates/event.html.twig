@@ -1,8 +1,7 @@
 {% extends 'default.html.twig' %}
 {% set color = page.parent.header.currentColor %}
 {% block content %}
-    {{ dump(page.parent.header.currentColor) }}
-    <div id="list">
+    <div id="list" class="top left">
         <ul>
             <li>
                 <h1 class="item">{{ page.title }}</h1>
@@ -16,14 +15,16 @@
                         <a class="small" href="{{ info.url }}" target="_blank">{{ info.name }}</a>
                     {% endfor %}
                 {% endif %}
-                {% if page.media.images %}
-                    {% for img in page.media.images %}
-                        {{ img }}
-                    {% endfor %}
-                {% endif %}
-                {% if page.content %}<div class="text">{{ page.content }}</div>{% endif %}
             </li>
         </ul>
+    </div>
+    <div id="content">
+        {% if page.media.images %}
+            {% for img in page.media.images %}
+                {{ img }}
+            {% endfor %}
+        {% endif %}
+        {% if page.content %}<div class="text">{{ page.content }}</div>{% endif %}
     </div>
     <nav id="page-nav" class="bottom">
         <a href="{{ page.parent.route }}">Retour</a>
