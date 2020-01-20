@@ -25,27 +25,35 @@
     <div id="content">
         {% for item in page.header.content %}
             {% if item.media %}
-                {% for media in item.media %}
-                    {% if media.type|contains('image') %}
-                        <img src="/{{ media.path }}" alt=""/>
-                    {% else %}
-                    {% if media.type|contains('video') %}
-                        {{ page.media[media.name].controls(1) }}
-                    {% else %}
-                    {% if media.type|contains('audio') %}
-                        {{ page.media[media.name].controls(1) }}
-                    {% endif %}
-                    {% endif %}
-                    {% endif %}
-                {% endfor %}
+            <figure>
+                {% set mediaType = page.media[item.media].items.type %}
+                {% if mediaType == 'image' or mediaType== 'animated' %}
+                    {{ page.media[item.media].html('', item.caption) }}
+                {% else %}
+                {% if mediaType == 'video' or mediaType == 'audio' %}
+                    {{ page.media[item.media].controls(1) }}
+                {% endif %}
+                {% endif %}
             {% endif %}
             {% if item.caption %}
                 <figcaption>{{ item.caption }}</figcaption>
             {% endif %}
+            </figure>
             {% if item.text %}
                 <div class="text">{{ item.text|markdown }}</div>
             {% endif %}
         {% endfor %}
+        {% if not page.header.content and page.media %}
+        {% for media in page.media.all %}
+            {% if media.type =='image' or media.type == 'animated' %}
+                {{ media.html() }}
+            {% else %}
+            {% if media.type == 'video' or media.type == 'audio' %}
+                {{ media.controls(1) }}
+            {% endif %}
+            {% endif %}
+        {% endfor %}
+        {% endif %}
         {% if page.content %}<div class="text">{{ page.content }}</div>{% endif %}
     </div>
     <nav id="page-nav" class="bottom">
