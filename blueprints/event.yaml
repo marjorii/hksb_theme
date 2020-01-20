@@ -38,3 +38,27 @@ form:
                 .url:
                   type: text
                   label: Url
+            header.content:
+               type: list
+               style: vertical
+               label: Contenu
+               fields:
+                  .media:
+                     type: file
+                     label: Média
+                     multiple: true
+                     destination: 'self@'
+                     filesize: 15
+                     accept:
+                        - image/*
+                        - gif/*
+                        - video/*
+                        - audio/*
+                  .caption:
+                      type: text
+                      label: Légende
+                  .text:
+                      type: editor
+                      label: Texte
+                      codemirror:
+                          mode: 'markdown'
