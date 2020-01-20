@@ -62,10 +62,9 @@ main {
     nav {
         display: flex;
         flex-direction: row;
-        a {
+        button {
         font-family: "Quebec Bold";
         font-size: 2rem;
-        text-decoration: none;
         padding: 0 20px 17px 20px;
         background-color: black;
         color: white;
@@ -81,7 +80,6 @@ main {
         font-family: 'VG5000';
         font-size: 3.5rem;
         line-height: 3.5rem;
-        text-decoration: none;
         color: black;
         word-wrap: break-word;
     }
@@ -102,7 +100,6 @@ main {
     }
     li a:not(.item) {
         color: blue;
-        text-decoration: none;
     }
 }
 
@@ -134,7 +131,6 @@ main {
         font-family: "Dauphine";
         font-size: 1.5rem;
         line-height: 1.5rem;
-        text-decoration: none;
         color: black;
     }
 }
@@ -173,7 +169,6 @@ main {
     a {
         font-family: "Quebec Bold";
         color: white;
-        text-decoration: none;
         display: block;
         font-size: 1.75rem;
         line-height: 3.5rem;
@@ -241,7 +236,6 @@ main {
     }
     a:not(#cross) {
         text-align: center;
-        text-decoration: none;
         display: block;
         color: white;
         font-family: 'Quebec Bold';
@@ -264,7 +258,7 @@ main {
     font-weight: 700;
     line-height: 1 !important;
     color: white;
-    text-decoration: none;
+    background-color: transparent;
     z-index: 999;
 }
 .hide {
@@ -284,6 +278,14 @@ main {
 }
 .current {
     background-color: $green;
+}
+button {
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+a {
+    text-decoration: none;
 }
 
 @media (max-width: 768px), (max-height: 768px) {
@@ -314,7 +316,7 @@ main {
             padding: 10px 10px 17px 10px;
         }
         nav {
-            a {
+            button {
                 font-size: 1.25rem;
                 line-height: 1;
                 padding: 15px 10px 20px 10px;
@@ -341,13 +343,14 @@ main {
         li {
             padding-bottom: 50px;
         }
+        a, p {
+            line-height: 2rem;
+        }
         a {
             font-size: 2rem;
-            line-height: 2rem;
         }
         p {
             font-size: 1.5rem;
-            line-height: 2rem;
         }
         .small {
             font-size: 1rem;
@@ -355,16 +358,12 @@ main {
     }
     #menu {
         width: 25%;
-        div {
+        div, a {
             font-size: 1.75rem;
             line-height: 3.5rem;
         }
         div:first-of-type {
             width: 13vh;
-        }
-        a {
-            font-size: 1.75rem;
-            line-height: 3.5rem;
         }
     }
 }
@@ -372,11 +371,7 @@ main {
 @media (max-width: 767px) and (orientation: portrait) {
     #menu {
         width: 100%;
-        div {
-            font-size: 1.5rem;
-            line-height: 2.5rem;
-        }
-        a {
+        div, a {
             font-size: 1.5rem;
             line-height: 2.5rem;
         }
@@ -392,21 +387,14 @@ main {
 }
 @media (max-width: 1280px) and (orientation: landscape) {
     #menu {
-        div {
-            line-height: 3rem;
-        }
-        a {
+        div, a {
             line-height: 3rem;
         }
     }
 }
 @media (max-height: 767px) and (orientation: landscape) {
     #menu {
-        div {
-            font-size: 1rem;
-            line-height: 1.25rem;
-        }
-        a {
+        div, a {
             font-size: 1rem;
             line-height: 1.25rem;
         }

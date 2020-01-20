@@ -18,8 +18,8 @@
             </li>
         </ul>
         <nav>
-            <a href="" id="menu-toggler">Menu</a>
-            <a href="" id="map-toggler">Map</a>
+            <button type="button" id="menu-toggler" alt="Ouvrir le Menu">Menu</button>
+            <button type="button" id="map-toggler" alt="Ouvrir la Map">Map</button>
         </nav>
     </div>
     <div id="content">
@@ -27,7 +27,7 @@
             {% if item.media %}
                 {% for media in item.media %}
                     {% if media.type|contains('image') %}
-                        <img src="/{{ media.path }}"/>
+                        <img src="/{{ media.path }}" alt=""/>
                     {% else %}
                     {% if media.type|contains('video') %}
                         {{ page.media[media.name].controls(1) }}

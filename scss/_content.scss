@@ -16,7 +16,6 @@ body.content {
             font-family: "Dauphine";
             font-size: 1.5rem;
             line-height: 1.5rem;
-            text-decoration: none;
             color: black;
         }
     }
@@ -37,10 +36,9 @@ body.content {
             flex-direction: row;
             align-items: center;
             align-self: flex-start;
-            a {
+            button {
             font-family: "Quebec Bold";
             font-size: 2rem;
-            text-decoration: none;
             padding: 0 20px 17px 20px;
             background-color: black;
             color: white;
@@ -53,18 +51,18 @@ body.content {
         display: flex;
         flex-direction: column;
         align-items: center;
-        img, video, audio {
-            width: 50%;
+        img, video, audio, figcaption, .text {
             margin-top: 50px;
         }
+        img, video, audio {
+            width: 50%;
+        }
         figcaption {
-            margin-top: 50px;
             font-size: 1rem;
             line-height: 1.5rem;
         }
         .text {
             width: 100%;
-            margin-top: 50px;
             padding: 0;
             text-align: left;
             p {
@@ -88,7 +86,7 @@ body.content {
             nav {
                 right: 50px;
                 position: fixed;
-                a {
+                button {
                     font-size: 1.25rem;
                     line-height: 1;
                     padding: 15px 10px 20px 10px;
