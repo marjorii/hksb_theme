@@ -29,9 +29,9 @@
                 {% set mediaType = page.media[item.media].items.type %}
                 {% if mediaType == 'image' or mediaType== 'animated' %}
                     {% if page.media[item.media].height >= page.media[item.media].width %}
-                        {{ page.media[item.media].html('', item.caption, 'portrait') }}
+                        {{ page.media[item.media].html('', '', 'portrait') }}
                         {% else %}
-                        {{ page.media[item.media].html('', item.caption) }}
+                        {{ page.media[item.media].html('', '') }}
                     {% endif %}
                 {% else %}
                 {% if mediaType == 'video' or mediaType == 'audio' %}
@@ -40,7 +40,7 @@
                 {% endif %}
             {% endif %}
             {% if item.caption %}
-                <figcaption>{{ item.caption }}</figcaption>
+                <figcaption>{{ item.caption|markdown }}</figcaption>
             {% endif %}
             </figure>
             {% if item.text %}

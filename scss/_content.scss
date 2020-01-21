@@ -71,6 +71,9 @@ body.content {
         figcaption {
             font-size: 1rem;
             line-height: 1.5rem;
+            a {
+                color: blue;
+            }
         }
         .text {
             width: 100%;
@@ -80,6 +83,9 @@ body.content {
                 font-size: 1.5rem;
                 line-height: 2rem;
                 margin: 0;
+            }
+            a {
+                color: blue;
             }
         }
     }
