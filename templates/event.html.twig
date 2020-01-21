@@ -28,7 +28,11 @@
             <figure>
                 {% set mediaType = page.media[item.media].items.type %}
                 {% if mediaType == 'image' or mediaType== 'animated' %}
-                    {{ page.media[item.media].html('', item.caption) }}
+                    {% if page.media[item.media].height >= page.media[item.media].width %}
+                        {{ page.media[item.media].html('', item.caption, 'portrait') }}
+                        {% else %}
+                        {{ page.media[item.media].html('', item.caption) }}
+                    {% endif %}
                 {% else %}
                 {% if mediaType == 'video' or mediaType == 'audio' %}
                     {{ page.media[item.media].controls(1) }}

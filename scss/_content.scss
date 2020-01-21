@@ -60,6 +60,9 @@ body.content {
         img, video, audio {
             width: 50%;
         }
+        img.portrait {
+            width: 35%;
+        }
         figure {
             width: 100%;
             padding: 0;
@@ -120,11 +123,21 @@ body.content {
             img, video, audio, figcaption, .text {
                 margin-top: 25px;
             }
+            img.portrait {
+                width: 50%;
+            }
             .text {
                 p {
                     font-size: 1.25rem;
                     line-height: 1.75rem;
                 }
+            }
+        }
+    }
+    @media (max-width: 767px) and (orientation: portrait) {
+        #content {
+            img.portrait {
+                width: 100%;
             }
         }
     }
