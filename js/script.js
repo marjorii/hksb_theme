@@ -1,34 +1,32 @@
+var menu = document.getElementById('menu');
+var map = document.getElementById('map');
+
 if (document.body.classList.contains('content')) {
-    document.querySelector('#list nav #menu-toggler').onclick = function(e) {
-        e.preventDefault();
-        document.getElementById('menu').classList.remove('hide');
-    }
-    document.querySelector('#menu #cross').onclick = function(e) {
-        e.preventDefault();
-        document.getElementById('menu').classList.add('hide');
-    }
-    document.querySelector('#list nav #map-toggler').onclick = function(e) {
-        e.preventDefault();
-        document.getElementById('map').classList.remove('hide');
-    }
-    document.querySelector('#map #cross').onclick = function(e) {
-        e.preventDefault();
-        document.getElementById('map').classList.add('hide');
-    }
+    var menuToggler = document.querySelector('#list nav #menu-toggler');
+    var mapToggler = document.querySelector('#list nav #map-toggler');
 }
-document.getElementById('menu-toggler').onclick = function(e) {
+else {
+    var menuToggler = document.getElementById('menu-toggler');
+    var mapToggler = document.getElementById('map-toggler');
+}
+
+menuToggler.onclick = function(e) {
     e.preventDefault();
-    document.getElementById('menu').classList.remove('hide');
+    menu.classList.remove('hide');
+    document.querySelector('#menu li a.lang').focus();
 }
 document.querySelector('#menu #cross').onclick = function(e) {
     e.preventDefault();
-    document.getElementById('menu').classList.add('hide');
+    menu.classList.add('hide');
+    document.querySelector('#menu li a.lang').blur();
 }
-document.getElementById('map-toggler').onclick = function(e) {
+mapToggler.onclick = function(e) {
     e.preventDefault();
-    document.getElementById('map').classList.remove('hide');
+    map.classList.remove('hide');
+    document.querySelector('#map li:first-of-type a').focus();
 }
 document.querySelector('#map #cross').onclick = function(e) {
     e.preventDefault();
-    document.getElementById('map').classList.add('hide');
+    map.classList.add('hide');
+    document.querySelector('#map li:first-of-type a').blur();
 }
