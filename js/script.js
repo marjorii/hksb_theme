@@ -30,3 +30,9 @@ document.querySelector('#map #cross').onclick = function(e) {
     map.classList.add('hide');
     document.querySelector('#map li:first-of-type a').blur();
 }
+document.addEventListener("keydown", e => {
+  if (e.keyCode === 27) {
+      menu.classList.add('hide');
+      map.classList.add('hide');
+  }
+});
