@@ -51,8 +51,10 @@ form:
                 .caption:
                   type: text
                   label: Légende
+                  placeholder: 'Text or link <a href="" target="_blank">link</a>'
                 .text:
                   type: editor
                   label: Texte
+                  placeholder: '<figure><img/><figcaption><p></p></figcaption></figure>'
                   codemirror:
                     mode: 'markdown'

@@ -50,91 +50,24 @@
         </li>
         <li class="bottom">
             {% for page in pages.children.visible %}
-                {{ dump(page.url) }}
-                {{ dump(page.title) }}
+            <a href="{{ page.url }}">{{ page.title }}</a>
             {% endfor %}
-            <!-- Change the following code by for loop when all pages created -->
-            <a href="/news">News</a>
-            <a href="/agenda">Agenda</a>
-            <a href="/places">Lieux</a>
-            <a href="/projects">Projets</a>
-            <a href="">Archives</a>
-            <a href="">Ressources</a>
-            <a href="">À Propos</a>
-            <a href="">Contact</a>
-            <a href="">Page Joker</a>
         </li>
     </ul>
 </div>
 <div id="map" class="hide">
     <button type="button" id="cross" class="top right" alt="Fermer la Map">✕</button>
-    {% for page in pages.children.visible %}
-        {{ dump(page.url) }}
-        {{ dump(page.title) }}
-    {% endfor %}
-
-    <!-- Change the following code by for loop above when all pages created -->
     <ul>
-    <div>
+    {% for page in pages.children.visible %}
         <div>
-            <li>
-                <a href="/news">News</a>
-            </li>
+            <div>
+                <li>
+                    <a href="{{ page.url }}">{{ page.title }}</a>
+                </li>
+            </div>
         </div>
-    </div>
-    <div>
-        <div>
-            <li>
-                <a href="/agenda">Agenda</a>
-            </li>
-        </div>
-    </div>
-    <div>
-        <div>
-            <li>
-                <a href="/places">Lieux</a>
-            </li>
-        </div>
-    </div>
-    <div>
-        <div>
-            <li>
-                <a href="/projects">Projets</a>
-            </li>
-        </div>
-    </div>
-    <div>
-        <div>
-            <li>
-                <a href="">Archives</a>
-            </li>
-        </div>
-    </div>
-    <div>
-        <div>
-            <a href="">Ressources</a>
-        </div>
-    </div>
-    <div>
-        <div>
-            <li>
-                <a href="">À Propos</a>
-            </li>
-        </div>
-    </div>
-    <div>
-        <div>
-            <a href="">Contact</a>
-        </div>
-    </div>
-    <div>
-        <div>
-            <li>
-                <a href="">Page Joker</a>
-            </li>
-        </div>
-    </div>
-</div>
+    {% endfor %}
+    </ul>
 {% endblock %}
 
 {% block javascripts %}
