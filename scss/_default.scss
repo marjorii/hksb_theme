@@ -89,6 +89,18 @@ main {
         -o-hyphens: auto;
         hyphens: auto;
     }
+    h2 {
+        font-family: 'Quebec';
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        display: inline-block;
+        margin: 0;
+        margin-bottom: 50px;
+        padding: 10px;
+        background-color: black;
+        color: white;
+    }
     li {
         padding-bottom: 100px;
         &:last-of-type {
@@ -172,18 +184,18 @@ main {
                 }
             }
         }
-        a {
-            font-family: "Quebec Bold";
-            color: white;
-            display: block;
-            font-size: 1.75rem;
-            line-height: 3.5rem;
-            &.lang {
-                display: inline-block;
-            }
-        }
         &:last-of-type {
             padding-bottom: 50px;
+        }
+    }
+    a {
+        font-family: "Quebec Bold";
+        color: white;
+        display: block;
+        font-size: 1.75rem;
+        line-height: 3.5rem;
+        &.lang {
+            display: inline-block;
         }
     }
 }
@@ -299,6 +311,7 @@ a {
     text-decoration: none;
 }
 
+
 @media (max-width: 800px), (max-height: 800px) {
     main {
         padding: 50px;
@@ -384,6 +397,14 @@ a {
     }
 }
 
+@media (max-width: 1280px) and (orientation: landscape) {
+    #menu {
+        div, a {
+            line-height: 3rem;
+        }
+    }
+}
+
 @media (max-width: 767px) and (orientation: portrait) {
     #menu {
         width: 100%;
@@ -394,18 +415,6 @@ a {
     }
     #map a:not(#cross) {
         font-size: 1.5rem;
-    }
-}
-@media (min-width: 768px) and (orientation: portrait) {
-    #menu {
-        width: 35%;
-    }
-}
-@media (max-width: 1280px) and (orientation: landscape) {
-    #menu {
-        div, a {
-            line-height: 3rem;
-        }
     }
 }
 @media (max-height: 767px) and (orientation: landscape) {
@@ -420,5 +429,10 @@ a {
         div:last-of-type {
             padding-bottom: 25px;
         }
+    }
+}
+@media (min-width: 768px) and (orientation: portrait) {
+    #menu {
+        width: 35%;
     }
 }

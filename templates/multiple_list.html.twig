@@ -1,0 +1,9 @@
+{% extends 'list.html.twig' %}
+
+{% block list %}
+{% for collectionName in page.header.list %}
+    <h2>{{ collectionName|upper|t }}</h2>
+    {{ dump(collectionName) }}
+    {% include 'partials/list.html.twig' with { collection: page.collection(collectionName) } %}
+{% endfor %}
+{% endblock %}
