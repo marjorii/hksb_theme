@@ -311,6 +311,7 @@ a {
     text-decoration: none;
 }
 
+// MEDIAQUERIES
 
 @media (max-width: 800px), (max-height: 800px) {
     main {
@@ -368,6 +369,11 @@ a {
             font-size: 2.75rem;
             line-height: 3rem;
         }
+        h2 {
+            font-size: 1rem;
+            line-height: 1rem;
+            margin-bottom: 25px;
+        }
         li {
             padding-bottom: 50px;
         }
@@ -397,14 +403,24 @@ a {
     }
 }
 
+// tablet landscape
 @media (max-width: 1280px) and (orientation: landscape) {
     #menu {
         div, a {
             line-height: 3rem;
         }
+        li {
+            &:first-of-type {
+                padding-top: 25px;
+            }
+            &:last-of-type {
+                padding-bottom: 25px;
+            }
+        }
     }
 }
 
+// phone portrait
 @media (max-width: 767px) and (orientation: portrait) {
     #menu {
         width: 100%;
@@ -412,11 +428,21 @@ a {
             font-size: 1.5rem;
             line-height: 2.5rem;
         }
+        li {
+            &:first-of-type {
+                padding-top: 25px;
+            }
+            &:last-of-type {
+                padding-bottom: 25px;
+            }
+        }
     }
     #map a:not(#cross) {
         font-size: 1.5rem;
     }
 }
+
+//phone landscape
 @media (max-height: 767px) and (orientation: landscape) {
     #menu {
         div, a {
@@ -431,6 +457,8 @@ a {
         }
     }
 }
+
+// tablet portrait
 @media (min-width: 768px) and (orientation: portrait) {
     #menu {
         width: 35%;
